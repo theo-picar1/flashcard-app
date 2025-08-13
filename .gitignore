@@ -1,0 +1,11 @@
+# Client
+client/node_modules
+client/.next
+
+# Server
+server/__pycache__/
+server/.venv
+server/*.pyc
+
+# Environment variables
+*.env
