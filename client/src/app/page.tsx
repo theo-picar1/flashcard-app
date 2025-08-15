@@ -1,103 +1,126 @@
-import Image from "next/image";
+// ***** LANDING PAGE COMPONENT *****
+
+// Components
+import Button from "@/components/Button"
+import Card from "@/components/Card"
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    return (
+        <main className="flex-column-no-gap items-center py-12 gap-20">
+            <div className="padding-rule w-full flex flex-col gap-5 items-center px-4 md:justify-between md:gap-5 lg:flex-row lg:items-start">
+                <div className="flex-column-no-gap items-center gap-6 lg:items-start">
+                    <div className="text-center lg:text-left">
+                        <p className="text-4xl text-[var(--bold-text)] font-bold md:text-5xl lg:text-6xl">
+                            Study Smarter,
+                        </p>
+                        <p className="text-4xl text-[var(--website-blue)] font-bold md:text-5xl lg:text-6xl">
+                            Not Harder
+                        </p>
+                    </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+                    <p className="text-center lg:text-left">
+                        Create flashcards, carry out exams and organise subjects with our application to
+                        ensure you ace your next test!
+                    </p>
+
+                    <div className="flex flex-col gap-2 w-full lg:flex-row">
+                        <Button className="lg:w-48">Start studying now</Button>
+
+                        <Button className="lg:w-48" variant="white">Create an account</Button>
+                    </div>
+
+                    <div className="flex-row-no-gap gap-2">
+                        <div className="flex-row-no-gap gap-1">
+                            <img src="/images/group-large-icon.png" alt="Group icon" className="w-6 brightness-200" />
+
+                            <p className="text-s">1000+ users</p>
+                        </div>
+
+                        <div className="flex-row-no-gap gap-1">
+                            <img src="/images/line-graph-large-icon.png" alt="Line graph icon" className="w-6 brightness-200" />
+
+                            <p className="text-s">Growing daily</p>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="images/study-image1.jpg" alt="Frustrated girl studying" className="block rounded-2xl shadow-2xl w-full max-w-xl" />
+            </div>
+
+            <div className="padding-rule bg-[var(--website-blue)] w-full flex flex-col gap-8 p-4 py-12 text-[var(--accent-text)] lg:grid lg: grid-cols-3 lg:justify-center">
+                <div className="flex-column-no-gap text-center">
+                    <p className="text-4xl font-black">1000+</p>
+
+                    <p className="font-medium">Studying Users</p>
+                </div>
+
+                <div className="flex-column-no-gap text-center">
+                    <p className="text-4xl font-black">4.2</p>
+
+                    <p className="font-medium">Average Rating</p>
+                </div>
+
+                <div className="flex-column-no-gap text-center">
+                    <p className="text-4xl font-black">100,000+</p>
+
+                    <p className="font-medium">Flashcards Created</p>
+                </div>
+            </div>
+
+            <div className="text-center flex-column-no-gap items-center gap-6 px-4 padding-rule">
+                <p className="text-2xl text-[var(--bold-text)] font-bold">Maximise your learning ability</p>
+
+                <p>
+                    Boost your productivity and learning with the help of our built-in exam sessions and
+                    our AI generators to create high-quality flashcards and quizzes
+                </p>
+
+                <div className="flex-column-no-gap gap-6 w-full">
+                    <Card className="w-full flex-column-no-gap gap-4 p-6">
+                        <div className="flex-center-item gap-2">
+                            <img src="/images/book-icon-large.png" alt="Book" className="w-12" />
+                            <p className="text-xl font-bold text-[var(--bold-text)]">Create study material</p>
+                        </div>
+
+                        <p>
+                            Create as many subjects, topics, flashcards and exams as you need.
+                        </p>
+                    </Card>
+
+                    <Card className="w-full flex-column-no-gap gap-4 p-6">
+                        <div className="flex-center-item gap-2">
+                            <img src="/images/brain-icon-large.png" alt="Brain" className="w-12" />
+                            <p className="text-xl font-bold text-[var(--bold-text)]">Save more time</p>
+                        </div>
+
+                        <p>
+                            Save more time by having our AI generate flashcards and exams for you.
+                        </p>
+                    </Card>
+
+                    <Card className="w-full flex-column-no-gap gap-4 p-6">
+                        <div className="flex-center-item gap-2">
+                            <img src="/images/clock-icon-large.png" alt="Clock" className="w-12" />
+                            <p className="text-xl font-bold text-[var(--bold-text)]">Track your progress</p>
+                        </div>
+
+                        <p>
+                            Know how much you have studied, with smart recommendation on what to study next.
+                        </p>
+                    </Card>
+
+                    <Card className="w-full flex-column-no-gap gap-4 p-6">
+                        <div className="flex-center-item gap-2">
+                            <img src="/images/free-icon-large.png" alt="No money" className="w-12" />
+                            <p className="text-xl font-bold text-[var(--bold-text)]">Completely free</p>
+                        </div>
+
+                        <p>
+                            No paywall at all! Create study material with no thought about payments.
+                        </p>
+                    </Card>
+                </div>
+            </div>
+        </main>
+    )
 }

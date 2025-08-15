@@ -1,25 +1,71 @@
+@import "tailwindcss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f8fb;
+  --bold-text: #101828;
+  --regular-text: #4A5665;
+  --accent-text: #ffffff;
+  --website-blue: #4A90E2;
+  --website-green: #509F48;
+  --website-red: #E23D31;
 }
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-@media (prefers-color-scheme: dark) {
+} */
+
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #121212;
+    --bold-text: #E5E7EB;
+    --regular-text: #A1A9B3;
+    --website-blue: #3B7AC6;
+    --website-green: #3F813C;
+    --website-red: #C1372B;
   }
-}
+} */
+
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}/*# sourceMappingURL=globals.css.map */
+  color: var(--regular-text);
+  font-size: 18px;
+}
+
+/* Flex */
+.flex-row-between {
+  @apply flex flex-row justify-between items-center;
+}
+
+.flex-row-no-gap {
+  @apply flex flex-row items-center;
+}
+
+.flex-column-no-gap {
+  @apply flex flex-col;
+}
+
+.flex-center-item {
+  @apply flex flex-col justify-center items-center;
+}
+
+/* Components */
+.base-button {
+  @apply w-full shadow-md flex flex-row justify-center items-center gap-2 px-4 py-2 rounded font-semibold transition-colors duration-200 cursor-pointer;
+}
+
+.base-card {
+  @apply bg-white shadow-md rounded-xl p-4 transition-shadow duration-200 hover:shadow-lg;
+}
+
+/* Spacing */
+.padding-rule {
+  @apply md:px-8 lg:px-12 xl:px-16;
+}
