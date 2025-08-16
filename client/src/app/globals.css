@@ -62,7 +62,7 @@ body {
 }
 
 .base-card {
-  @apply bg-white shadow-md rounded-xl p-4 transition-shadow duration-200 hover:shadow-lg;
+  @apply bg-white shadow-md rounded-xl transition-shadow duration-200 hover:shadow-lg;
 }
 
 /* Spacing */
