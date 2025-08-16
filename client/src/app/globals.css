@@ -56,16 +56,54 @@ body {
   @apply flex flex-col justify-center items-center;
 }
 
+.main-container-flex {
+  @apply flex flex-col py-12
+}
+
 /* Components */
 .base-button {
-  @apply w-full shadow-md flex flex-row justify-center items-center gap-2 px-4 py-2 rounded font-semibold transition-colors duration-200 cursor-pointer;
+  @apply shadow-md flex items-center justify-center text-center gap-2 rounded transition-colors duration-200 cursor-pointer;
 }
 
 .base-card {
-  @apply bg-white shadow-md rounded-xl p-4 transition-shadow duration-200 hover:shadow-lg;
+  @apply bg-white shadow-md rounded-xl transition-shadow duration-200 hover:shadow-lg;
 }
 
 /* Spacing */
-.padding-rule {
-  @apply md:px-8 lg:px-12 xl:px-16;
+.base-padding-rule {
+  @apply md:px-8 lg:px-16 xl:px-24;
+}
+
+.base-scroll-margin {
+  @apply md:-mx-8 lg:-mx-16 xl:-mx-24;
+}
+
+/* Typography (titles) */
+.xl-bold-text {
+  @apply font-bold text-4xl md:text-5xl lg:text-6xl;
+}
+
+.lg-bold-text {
+  @apply font-bold text-3xl;
+}
+
+.md-bold-text {
+  @apply font-bold text-2xl;
+}
+
+.sm-bold-text {
+  @apply font-bold text-xl;
+}
+
+.xs-bold-text {
+  @apply font-bold text-lg;
+}
+
+/* Scroll shadows */
+.left-shadow {
+  background: linear-gradient(to right, rgb(245, 248, 251), transparent);
+}
+
+.right-shadow {
+  background: linear-gradient(to left, rgb(245, 248, 251), transparent);
 }

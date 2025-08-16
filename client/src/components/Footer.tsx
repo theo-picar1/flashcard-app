@@ -2,7 +2,7 @@
 
 export default function Footer() {
     return (
-        <footer className="padding-rule bg-[var(--website-blue)] text-[var(--accent-text)]">
+        <footer className="base-padding-rule bg-[var(--website-blue)] text-[var(--accent-text)]">
             <div className="container mx-auto px-4 py-12">
                 <div className="text-center space-y-8">
                     <span className="text-4xl font-bold">Flashcard App</span>

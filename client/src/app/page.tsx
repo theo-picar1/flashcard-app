@@ -6,21 +6,26 @@ import Card from "@/components/Card"
 
 export default function Home() {
     return (
-        <main className="flex-column-no-gap items-center py-12 gap-20">
-            <div className="padding-rule w-full flex flex-col gap-5 items-center px-4 md:justify-between md:gap-5 lg:flex-row lg:items-start">
-                <div className="flex-column-no-gap items-center gap-6 lg:items-start">
+        <main className="main-container-flex items-center gap-20">
+            {/* Section 1 */}
+            <div className="base-padding-rule w-full flex flex-col gap-5 items-center px-4 md:justify-between md:gap-5 lg:flex-row lg:items-start">
+                <div className="flex-column-no-gap items-center gap-6 lg:items-start lg:max-w-md">
                     <div className="text-center lg:text-left">
-                        <p className="text-4xl text-[var(--bold-text)] font-bold md:text-5xl lg:text-6xl">
+                        <p className="xl-bold-text text-[var(--bold-text)]">
                             Study Smarter,
                         </p>
-                        <p className="text-4xl text-[var(--website-blue)] font-bold md:text-5xl lg:text-6xl">
+                        <p className="xl-bold-text text-[var(--website-blue)]">
                             Not Harder
                         </p>
                     </div>
 
-                    <p className="text-center lg:text-left">
+                    <p className="text-center text-xl lg:text-left">
                         Create flashcards, carry out exams and organise subjects with our application to
                         ensure you ace your next test!
+                    </p>
+
+                    <p className="text-center text-xl lg:text-left">
+                        Start now and maximise your study potential and boost your productivity!
                     </p>
 
                     <div className="flex flex-col gap-2 w-full lg:flex-row">
@@ -47,7 +52,8 @@ export default function Home() {
                 <img src="images/study-image1.jpg" alt="Frustrated girl studying" className="block rounded-2xl shadow-2xl w-full max-w-xl" />
             </div>
 
-            <div className="padding-rule bg-[var(--website-blue)] w-full flex flex-col gap-8 p-4 py-12 text-[var(--accent-text)] lg:grid lg: grid-cols-3 lg:justify-center">
+            {/* Section 2 */}
+            <div className="base-padding-rule bg-[var(--website-blue)] w-full flex flex-col gap-8 p-4 py-12 text-[var(--accent-text)] lg:grid lg: grid-cols-3 lg:justify-center">
                 <div className="flex-column-no-gap text-center">
                     <p className="text-4xl font-black">1000+</p>
 
@@ -67,7 +73,8 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="text-center flex-column-no-gap items-center gap-6 px-4 padding-rule">
+            {/* Section 3 */}
+            <div className="text-center flex-column-no-gap items-center gap-6 px-4 base-padding-rule">
                 <p className="text-2xl text-[var(--bold-text)] font-bold">Maximise your learning ability</p>
 
                 <p>
@@ -76,7 +83,7 @@ export default function Home() {
                 </p>
 
                 <div className="flex-column-no-gap gap-6 w-full">
-                    <Card className="w-full flex-column-no-gap gap-4 p-6">
+                    <Card className="w-full flex-column-no-gap gap-4 p-6 lg:py-12">
                         <div className="flex-center-item gap-2">
                             <img src="/images/book-icon-large.png" alt="Book" className="w-12" />
                             <p className="text-xl font-bold text-[var(--bold-text)]">Create study material</p>
@@ -87,7 +94,7 @@ export default function Home() {
                         </p>
                     </Card>
 
-                    <Card className="w-full flex-column-no-gap gap-4 p-6">
+                    <Card className="w-full flex-column-no-gap gap-4 p-6 lg:py-12">
                         <div className="flex-center-item gap-2">
                             <img src="/images/brain-icon-large.png" alt="Brain" className="w-12" />
                             <p className="text-xl font-bold text-[var(--bold-text)]">Save more time</p>
@@ -98,7 +105,7 @@ export default function Home() {
                         </p>
                     </Card>
 
-                    <Card className="w-full flex-column-no-gap gap-4 p-6">
+                    <Card className="w-full flex-column-no-gap gap-4 p-6 lg:py-12">
                         <div className="flex-center-item gap-2">
                             <img src="/images/clock-icon-large.png" alt="Clock" className="w-12" />
                             <p className="text-xl font-bold text-[var(--bold-text)]">Track your progress</p>
@@ -109,7 +116,7 @@ export default function Home() {
                         </p>
                     </Card>
 
-                    <Card className="w-full flex-column-no-gap gap-4 p-6">
+                    <Card className="w-full flex-column-no-gap gap-4 p-6 lg:py-12">
                         <div className="flex-center-item gap-2">
                             <img src="/images/free-icon-large.png" alt="No money" className="w-12" />
                             <p className="text-xl font-bold text-[var(--bold-text)]">Completely free</p>

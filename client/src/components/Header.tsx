@@ -2,7 +2,7 @@
 
 export default function Header() {
     return (
-        <header className="flex-row-between p-4 bg-[var(--website-blue)] w-full text-[var(--accent-text)] padding-rule">
+        <header className="flex-row-between p-4 bg-[var(--website-blue)] w-full text-[var(--accent-text)] base-padding-rule">
             <div className="flex-row-no-gap gap-2">
                 <img src="/images/menu-icon.png"/>
 
