@@ -32,14 +32,14 @@ export default function Home() {
     return (
         <main className="base-padding-rule main-container-flex gap-10">
             <div>
-                <p className="lg-bold-text text-[var(--bold-text)]">Welcome back!</p>
+                <p className="text-center md:text-left lg-bold-text text-[var(--bold-text)]">Welcome back!</p>
 
-                <p className="text-xl mt-2">Start studying and master your subjects, flashcards and exams!</p>
+                <p className="text-center md:text-left text-xl mt-2">Start studying and master your subjects, flashcards and exams!</p>
             </div>
 
-            {/* Subjects to study */}
+            {/* Review needed */}
             <div className="relative w-screen base-scroll-margin">
-                <p className="md-bold-text text-[var(--bold-text)] base-padding-rule">Subjects to study</p>
+                <p className="md-bold-text text-[var(--bold-text)] base-padding-rule">Review needed</p>
 
                 <HorizontalScroll>
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
@@ -57,7 +57,7 @@ export default function Home() {
 
             {/* Your subjects */}
             <div className="relative w-screen base-scroll-margin">
-                <p className="base-padding-rule md-bold-text text-[var(--bold-text)]">Your subjects</p>
+                <p className="base-padding-rule md-bold-text text-[var(--bold-text)]">Subjects</p>
 
                 <HorizontalScroll>
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
@@ -91,7 +91,7 @@ export default function Home() {
 
             {/* Recently Accessed */}
             <div className="relative w-screen base-scroll-margin">
-                <p className="base-padding-rule md-bold-text text-[var(--bold-text)]">Recently accessed</p>
+                <p className="base-padding-rule md-bold-text text-[var(--bold-text)]">Recent</p>
 
                 <HorizontalScroll>
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>

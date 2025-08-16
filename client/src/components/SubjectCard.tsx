@@ -17,12 +17,12 @@ interface SubjectCardProps {
 export default function SubjectCard({ title, totalTopics, image, totalFlashcards, colour }: SubjectCardProps) {
     return (
         <Card className="flex-none cursor-pointer">
-            <div>
+            <div className="w-64 md:min-w-md">
                 {/* Image and title section */}
                 <div className="relative">
-                    <img src={image} alt={title} className="max-w-sm" />
+                    <img src={image} alt={title} className="min-w-full rounded-tl-lg rounded-tr-lg" />
 
-                    <div className="absolute inset-0 p-4 flex-center-item">
+                    <div className="absolute inset-0 p-4 flex-center-item rounded-tl-lg rounded-tr-lg overflow-hidden">
                         <div className="absolute inset-0 bg-black/75"></div>
 
                         <p className="relative lg-bold-text text-center text-[var(--accent-text)]">
@@ -32,25 +32,25 @@ export default function SubjectCard({ title, totalTopics, image, totalFlashcards
                 </div>
 
                 {/* Details and options section */}
-                <div className="px-6 py-4 flex-row-between border-t-8" style={{ borderColor: `${colour}` }}>
-                    <div className="flex-row-no-gap gap-8">
+                <div className="w-full px-6 py-4 flex flex-col md:flex-row items-center gap-4 md:gap-8 border-t-8" style={{ borderColor: `${colour}` }}>
+                    <div className="flex flex-row gap-8 items-center">
                         <div className="text-center flex-column-no-gap items-center justify-start">
                             <p className="font-semibold text-3xl text-[var(--bold-text)]">{totalTopics}</p>
 
-                            <p>Topics</p>
+                            <p className="text-xs">Topics</p>
                         </div>
 
                         <div className="text-center items-center justify-start">
                             <p className="font-semibold text-3xl text-[var(--bold-text)]">{totalFlashcards}</p>
 
-                            <p>Flashcards</p>
+                            <p className="text-xs">Flashcards</p>
                         </div>
                     </div>
 
-                    <div>
-                        <Button className="w-32 font-medium" variant="blue" padding="slim">Open</Button>
+                    <div className="w-full">
+                        <Button className="w-full font-medium" variant="blue" padding="slim">Open</Button>
 
-                        <Button className="w-32 mt-1 font-medium" variant="green" padding="slim">Edit</Button>
+                        <Button className="w-full mt-1 font-medium" variant="green" padding="slim">Edit</Button>
                     </div>
                 </div>
             </div>

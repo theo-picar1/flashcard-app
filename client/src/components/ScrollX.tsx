@@ -31,14 +31,14 @@ export default function HorizontalScroll({ children }: HorizontalScrollProps) {
         <div className="relative w-screen">
             {/* Left shadow */}
             <div className={`
-                z-10 absolute left-0 top-0 h-full w-16 pointer-events-none transition-opacity duration-300
+                z-10 absolute left-0 top-0 h-full w-4 md:w-8 lg:w-12 pointer-events-none transition-opacity duration-300
                 bg-gradient-to-r from-[rgb(245,248,251)] to-transparent
                 ${showLeft ? 'opacity-100' : 'opacity-0'}
             `} />
 
             {/* Right shadow */}
             <div className={`
-                z-10 absolute right-0 top-0 h-full w-16 pointer-events-none transition-opacity duration-300
+                z-10 absolute right-0 top-0 h-full w-4 md:w-8 lg:w-12 pointer-events-none transition-opacity duration-300
                 bg-gradient-to-l from-[rgb(245,248,251)] to-transparent
                 ${showRight ? 'opacity-100' : 'opacity-0'}
             `} />

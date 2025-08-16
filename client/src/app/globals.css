@@ -66,16 +66,16 @@ body {
 }
 
 .base-card {
-  @apply bg-white shadow-md rounded-xl transition-shadow duration-200 hover:shadow-lg;
+  @apply bg-white shadow-lg rounded-xl transition-shadow duration-200 hover:shadow-lg;
 }
 
 /* Spacing */
 .base-padding-rule {
-  @apply md:px-8 lg:px-16 xl:px-24;
+  @apply px-4 md:px-8 lg:px-16 xl:px-24;
 }
 
 .base-scroll-margin {
-  @apply md:-mx-8 lg:-mx-16 xl:-mx-24;
+  @apply -mx-4 md:-mx-8 lg:-mx-16 xl:-mx-24;
 }
 
 /* Typography (titles) */
@@ -97,13 +97,4 @@ body {
 
 .xs-bold-text {
   @apply font-bold text-lg;
-}
-
-/* Scroll shadows */
-.left-shadow {
-  background: linear-gradient(to right, rgb(245, 248, 251), transparent);
-}
-
-.right-shadow {
-  background: linear-gradient(to left, rgb(245, 248, 251), transparent);
 }
