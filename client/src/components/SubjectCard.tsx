@@ -17,7 +17,7 @@ interface SubjectCardProps {
 export default function SubjectCard({ title, totalTopics, image, totalFlashcards, colour }: SubjectCardProps) {
     return (
         <Card className="flex-none cursor-pointer">
-            <div className="w-64 md:min-w-md">
+            <div className="w-72">
                 {/* Image and title section */}
                 <div className="relative">
                     <img src={image} alt={title} className="min-w-full rounded-tl-lg rounded-tr-lg" />
@@ -32,18 +32,18 @@ export default function SubjectCard({ title, totalTopics, image, totalFlashcards
                 </div>
 
                 {/* Details and options section */}
-                <div className="w-full px-6 py-4 flex flex-col md:flex-row items-center gap-4 md:gap-8 border-t-8" style={{ borderColor: `${colour}` }}>
-                    <div className="flex flex-row gap-8 items-center">
+                <div className="w-full px-8 py-4 flex flex-col items-center gap-4 border-t-8" style={{ borderColor: `${colour}` }}>
+                    <div className="flex flex-row gap-12 items-center">
                         <div className="text-center flex-column-no-gap items-center justify-start">
                             <p className="font-semibold text-3xl text-[var(--bold-text)]">{totalTopics}</p>
 
-                            <p className="text-xs">Topics</p>
+                            <p className="text-base">Topics</p>
                         </div>
 
                         <div className="text-center items-center justify-start">
                             <p className="font-semibold text-3xl text-[var(--bold-text)]">{totalFlashcards}</p>
 
-                            <p className="text-xs">Flashcards</p>
+                            <p className="text-base">Flashcards</p>
                         </div>
                     </div>
 

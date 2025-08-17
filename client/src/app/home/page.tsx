@@ -38,10 +38,10 @@ export default function Home() {
             </div>
 
             {/* Review needed */}
-            <div className="relative w-screen base-scroll-margin">
-                <p className="md-bold-text text-[var(--bold-text)] base-padding-rule">Review needed</p>
+            <section>
+                <p className="lg-bold-text text-[var(--bold-text)]">Review needed</p>
 
-                <HorizontalScroll>
+                <HorizontalScroll gap="gap-8">
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
 
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="blue"></SubjectCard>
@@ -52,14 +52,14 @@ export default function Home() {
 
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="orange"></SubjectCard>
                 </HorizontalScroll>
-            </div>
+            </section>
 
 
             {/* Your subjects */}
-            <div className="relative w-screen base-scroll-margin">
-                <p className="base-padding-rule md-bold-text text-[var(--bold-text)]">Subjects</p>
+            <section>
+                <p className="lg-bold-text text-[var(--bold-text)]">Subjects</p>
 
-                <HorizontalScroll>
+                <HorizontalScroll gap="gap-8">
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
 
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="green"></SubjectCard>
@@ -70,13 +70,13 @@ export default function Home() {
 
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="blue"></SubjectCard>
                 </HorizontalScroll>
-            </div>
+            </section>
 
             {/* Favourites */}
-            <div className="relative w-screen base-scroll-margin">
-                <p className="base-padding-rule md-bold-text text-[var(--bold-text)]">Favourites</p>
+            <section>
+                <p className="lg-bold-text text-[var(--bold-text)]">Favourites</p>
 
-                <HorizontalScroll>
+                <HorizontalScroll gap="gap-8">
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
 
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="green"></SubjectCard>
@@ -87,13 +87,13 @@ export default function Home() {
 
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="orange"></SubjectCard>
                 </HorizontalScroll>
-            </div>
+            </section>
 
             {/* Recently Accessed */}
-            <div className="relative w-screen base-scroll-margin">
-                <p className="base-padding-rule md-bold-text text-[var(--bold-text)]">Recent</p>
+            <section>
+                <p className="lg-bold-text text-[var(--bold-text)]">Recent</p>
 
-                <HorizontalScroll>
+                <HorizontalScroll gap="gap-8">
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
 
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="blue"></SubjectCard>
@@ -104,7 +104,7 @@ export default function Home() {
 
                     <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="purple"></SubjectCard>
                 </HorizontalScroll>
-            </div>
+            </section>
         </main>
     )
 }

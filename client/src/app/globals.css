@@ -98,3 +98,8 @@ body {
 .xs-bold-text {
   @apply font-bold text-lg;
 }
+
+/* Icons */
+.base-icon-size {
+  @apply w-6
+}
