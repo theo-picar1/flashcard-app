@@ -6,16 +6,17 @@ type ButtonProps = {
     variant?: 'blue' | 'green' | 'red' | 'white' | 'custom'
     padding?: 'slim' | 'base' | 'thick' | 'custom'
     className?: string
+    textColour?: string
 } & React.ButtonHTMLAttributes<HTMLButtonElement> // Allow regular button attributes (e.g. onClick)
 
-export default function Button({ children, icon, variant = 'blue', padding = 'base', className = '', ...props }: ButtonProps) {
+export default function Button({ children, icon, variant = 'blue', padding = 'base', className = '', textColour = '', ...props }: ButtonProps) {
     const base = "base-button"
 
     const variants = {
         blue: "bg-[var(--website-blue)] text-[var(--accent-text)] hover:brightness-90",
         green: "bg-[var(--website-green)] text-[var(--accent-text)] hover:brightness-90",
         red: "bg-[var(--website-red)] text-[var(--accent-text)] hover:brightness-90",
-        white: "bg-[var(--accent-text)] text-[var(--bold-text)] hover:brightness-90",
+        white: `bg-[var(--accent-text)] ${textColour} hover:brightness-90`,
         custom: ""
     }
 

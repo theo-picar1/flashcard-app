@@ -5,6 +5,10 @@ import HorizontalScroll from "@/components/ScrollX"
 
 // Components
 import SubjectCard from "@/components/SubjectCard"
+import Button from "@/components/Button"
+
+// Next.js
+import Link from "next/link"
 
 // React 
 import { useRef, useState, useEffect } from "react"
@@ -32,9 +36,17 @@ export default function Home() {
     return (
         <main className="base-padding-rule main-container-flex gap-10">
             <div>
-                <p className="text-center md:text-left lg-bold-text text-[var(--bold-text)]">Welcome back!</p>
+                <div className="w-full flex flex-col items-center lg:flex-row lg:items-start gap-4 lg:justify-between">
+                    <div>
+                        <p className="text-center lg:text-left lg-bold-text text-[var(--bold-text)]">Welcome back!</p>
+                        <p className="text-center lg:text-left text-xl mt-2">Start studying and master your subjects, flashcards and exams!</p>
+                    </div>
 
-                <p className="text-center md:text-left text-xl mt-2">Start studying and master your subjects, flashcards and exams!</p>
+                    <Button variant="green" padding="slim" className="m-auto rounded w-full max-w-xs lg:w-auto lg:m-0">
+                        <img src="/images/add-icon.png" alt="Add" className="brightness-90" />
+                        <p>Add subject</p>
+                    </Button>
+                </div>
             </div>
 
             {/* Review needed */}
@@ -42,50 +54,60 @@ export default function Home() {
                 <p className="lg-bold-text text-[var(--bold-text)]">Review needed</p>
 
                 <HorizontalScroll gap="gap-8">
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
+                    <SubjectCard title="English" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="blue"></SubjectCard>
+                    <SubjectCard title="Science" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="blue"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="green"></SubjectCard>
+                    <SubjectCard title="French" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="green"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="purple"></SubjectCard>
+                    <SubjectCard title="Music" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="purple"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="orange"></SubjectCard>
+                    <SubjectCard title="Maths" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="yellow"></SubjectCard>
                 </HorizontalScroll>
             </section>
 
 
             {/* Your subjects */}
             <section>
-                <p className="lg-bold-text text-[var(--bold-text)]">Subjects</p>
+                <div className="flex flex-row items-center justify-between">
+                    <p className="lg-bold-text text-[var(--bold-text)]">Subjects</p>
+                    <Link href="/">
+                        <Button padding="slim" variant="white" className="rounded-full" textColour="text-[var(--website-blue)]">View all</Button>
+                    </Link>
+                </div>
 
                 <HorizontalScroll gap="gap-8">
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
+                    <SubjectCard title="English" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="green"></SubjectCard>
+                    <SubjectCard title="French" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="green"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="orange"></SubjectCard>
+                    <SubjectCard title="Maths" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="yellow"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="purple"></SubjectCard>
+                    <SubjectCard title="Music" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="purple"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="blue"></SubjectCard>
+                    <SubjectCard title="Science" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="blue"></SubjectCard>
                 </HorizontalScroll>
             </section>
 
             {/* Favourites */}
             <section>
-                <p className="lg-bold-text text-[var(--bold-text)]">Favourites</p>
+                <div className="flex flex-row items-center justify-between">
+                    <p className="lg-bold-text text-[var(--bold-text)]">Favourites</p>
+                    <Link href="/">
+                        <Button padding="slim" variant="white" className="rounded-full" textColour="text-[var(--website-blue)]">View all</Button>
+                    </Link>
+                </div>
 
                 <HorizontalScroll gap="gap-8">
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
+                    <SubjectCard title="English" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="green"></SubjectCard>
+                    <SubjectCard title="French" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="green"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="purple"></SubjectCard>
+                    <SubjectCard title="Music" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="purple"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="blue"></SubjectCard>
+                    <SubjectCard title="Science" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="blue"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="orange"></SubjectCard>
+                    <SubjectCard title="Maths" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="yellow"></SubjectCard>
                 </HorizontalScroll>
             </section>
 
@@ -94,17 +116,19 @@ export default function Home() {
                 <p className="lg-bold-text text-[var(--bold-text)]">Recent</p>
 
                 <HorizontalScroll gap="gap-8">
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
+                    <SubjectCard title="English" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="red"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="blue"></SubjectCard>
+                    <SubjectCard title="Science" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="blue"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="green"></SubjectCard>
+                    <SubjectCard title="French" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="green"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="orange"></SubjectCard>
+                    <SubjectCard title="Maths" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="yellow"></SubjectCard>
 
-                    <SubjectCard title="Subject name" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="purple"></SubjectCard>
+                    <SubjectCard title="Music" totalTopics="10" totalFlashcards="20" image="/images/subject-placeholder-image1.jpg" colour="purple"></SubjectCard>
                 </HorizontalScroll>
             </section>
+
+            <p className="text-center text-xl">You have reached the end. No more content to see!</p>
         </main>
     )
 }

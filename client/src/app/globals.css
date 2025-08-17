@@ -62,7 +62,7 @@ body {
 
 /* Components */
 .base-button {
-  @apply shadow-md flex items-center justify-center text-center gap-2 rounded transition-colors duration-200 cursor-pointer;
+  @apply shadow-md flex items-center justify-center text-center gap-2 transition-colors duration-200 cursor-pointer;
 }
 
 .base-card {
@@ -71,11 +71,11 @@ body {
 
 /* Spacing */
 .base-padding-rule {
-  @apply px-4 md:px-8 lg:px-16 xl:px-24;
+  @apply px-4 md:px-8 lg:px-16 xl:px-32;
 }
 
 .base-scroll-margin {
-  @apply -mx-4 md:-mx-8 lg:-mx-16 xl:-mx-24;
+  @apply -mx-4 md:-mx-8 lg:-mx-16 xl:-mx-32;
 }
 
 /* Typography (titles) */

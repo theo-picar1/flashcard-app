@@ -49,7 +49,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <img src="images/study-image1.jpg" alt="Frustrated girl studying" className="block rounded-2xl shadow-2xl w-full max-w-xl" />
+                <img src="images/study-image1.jpg" alt="Frustrated girl studying" className="block rounded-2xl shadow-2xl w-full max-w-lg xl:max-w-xl" />
             </div>
 
             {/* Section 2 */}
