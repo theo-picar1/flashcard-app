@@ -9,7 +9,7 @@ interface HorizontalScrollProps {
     gap?: string
 }
 
-export default function HorizontalScroll({ children, gap = 'gap-0' }: HorizontalScrollProps) {
+export default function ScrollX({ children, gap = 'gap-0' }: HorizontalScrollProps) {
     const scrollRef = useRef<HTMLDivElement>(null)
     const [showLeft, setShowLeft] = useState(false)
     const [showRight, setShowRight] = useState(false)
@@ -47,7 +47,7 @@ export default function HorizontalScroll({ children, gap = 'gap-0' }: Horizontal
             {/* Scroll container */}
             <div
                 ref={scrollRef}
-                className={`${gap} flex-row-no-gap items-start base-padding-rule overflow-x-scroll py-4 px-1`}
+                className={`${gap} flex-row-no-gap base-padding-rule overflow-x-scroll py-4 px-1`}
                 style={{ scrollbarWidth: "none" }}
             >
                 {children}

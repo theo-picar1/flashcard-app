@@ -4,6 +4,9 @@
 import Card from "./Card"
 import Button from "./Button"
 
+// Link
+import Link from "next/link"
+
 // Props
 interface SubjectCardProps {
     // CHANGE FOLLOWING TO NUMBER WHEN USING ACTUAL DATA: totalTopics, totalFlashcards
@@ -12,12 +15,14 @@ interface SubjectCardProps {
     totalFlashcards: string
     image: string
     colour: string
+    width?: string
+    className?: string
 }
 
-export default function SubjectCard({ title, totalTopics, image, totalFlashcards, colour }: SubjectCardProps) {
+export default function SubjectCard({ title, totalTopics, image, totalFlashcards, colour, width = "w-72 lg:w-80", className = ""}: SubjectCardProps) {
     return (
-        <Card className="flex-none cursor-pointer">
-            <div className="w-72">
+        <Card className={`${className} ${width} cursor-pointer m-auto`}>
+            <div>
                 {/* Image and title section */}
                 <div className="relative">
                     <img src={image} alt={title} className="min-w-full rounded-tl-lg rounded-tr-lg" />
@@ -48,7 +53,9 @@ export default function SubjectCard({ title, totalTopics, image, totalFlashcards
                     </div>
 
                     <div className="w-full">
-                        <Button className="w-full font-medium" variant="blue" padding="slim">Open</Button>
+                        <Link href={`/subjects/${title}`}>
+                            <Button className="w-full font-medium" variant="blue" padding="slim">Open</Button>
+                        </Link>
 
                         <Button className="w-full mt-1 font-medium" variant="green" padding="slim">Edit</Button>
                     </div>
