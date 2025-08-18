@@ -18,7 +18,7 @@ export default function Home() {
                             Not Harder
                         </p>
                     </div>
-
+                  
                     <p className="text-center text-xl lg:text-left">
                         Create flashcards, carry out exams and organise subjects with our application to
                         ensure you ace your next test!
