@@ -1,6 +1,6 @@
 // ***** BASE CARD COMPONENT *****
 
-type CardProps = {
+interface CardProps {
     children: React.ReactNode
     className?: string
 }
