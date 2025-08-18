@@ -7,17 +7,18 @@ import Link from 'next/link'
 interface SectionProps {
     href: string
     iconSrc?: string
+    iconStyle?: string
     label?: string
     onClick?: () => void
-    textColour?: string
+    textStyle?: string
 }
 
-export default function Section({ href, iconSrc, label, onClick, textColour = 'text-[var(--regular-text)]' }: SectionProps) {
+export default function Section({ href, iconSrc, label, onClick, textStyle = 'text-[var(--regular-text)]', iconStyle }: SectionProps) {
     return (
         <Link href={href} onClick={onClick}>
-            <div className="flex-row-no-gap gap-4 px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                {iconSrc && <img src={iconSrc} alt={label} className="base-icon-size" />}
-                <p className={textColour || ''}>{label}</p>
+            <div className="flex-row-no-gap gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                {iconSrc && <img src={iconSrc} alt={label} className={`${iconStyle}`} />}
+                <p className={textStyle}>{label}</p>
             </div>
         </Link>
     )
