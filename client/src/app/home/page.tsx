@@ -83,7 +83,7 @@ export default function Home() {
             <section>
                 <div className="flex flex-row items-center justify-between">
                     <p className="lg-bold-text text-[var(--bold-text)]">Favourites</p>
-                    <Link href="/">
+                    <Link href="/favourites">
                         <Button padding="slim" variant="white" className="rounded-full" textColour="text-[var(--website-blue)]">View all</Button>
                     </Link>
                 </div>
