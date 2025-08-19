@@ -58,7 +58,7 @@ export default function Header() {
                 </div>
 
                 <div className="flex flex-row items-center gap-6">
-                    <div className="flex flex-row items-center gap-1 hover:brightness-90">
+                    <div className="hidden md:flex flex-row items-center gap-1 hover:brightness-90">
                         <img
                             src="/images/streaks-unactive-large-icon.png"
                             className="w-6 filter brightness-0 invert cursor-pointer"
@@ -69,7 +69,7 @@ export default function Header() {
 
                     <img
                         src="/images/notifications-unread-large-icon.png"
-                        className="w-6 h-6 filter brightness-0 invert cursor-pointer hover:brightness-90"
+                        className="hidden md:block w-6 h-6 filter brightness-0 invert cursor-pointer hover:brightness-90"
                         alt="Unread notifications"
                     />
 
@@ -85,17 +85,35 @@ export default function Header() {
                         <PopUpModal
                             isOpen={popUpIsOpen}
                             close={() => setIsPopUpOpen(false)}
-                            className="bg-white right-0 top-10 rounded-md w-auto flex flex-col items-center"
+                            className="bg-white right-0 top-10 rounded-md w-44 flex flex-col"
                         >
-                            <UserProfileIcon padding="p-6" textSize="text-base" className="mt-4"></UserProfileIcon>
+                            <div className="w-full flex flex-row justify-end pt-2 px-4"> 
+                                <img 
+                                    className="brightness-40 w-6 cursor-pointer hover:brightness-50" 
+                                    src="/images/close-icon.png" 
+                                    onClick={() => setIsPopUpOpen(false)} 
+                                />
+                            </div>
 
-                            <div className="my-2">
+                            <UserProfileIcon padding="p-6" textSize="text-base" className="m-auto"></UserProfileIcon>
+
+                            <div className="my-2 w-full">
+                                <Section 
+                                    href="/user/User1736291" // TAKES IN ID
+                                    label="View profile"
+                                    textStyle="text-sm text-[var(--regular-text)]"
+                                    iconSrc="/images/visibility-icon.png"
+                                    iconStyle="brightness-200 w-5"
+                                    onClick={() => setIsPopUpOpen(false)}
+                                />
+
                                 <Section 
                                     href="/" 
                                     label="Edit profile"
                                     textStyle="text-sm text-[var(--regular-text)]"
                                     iconSrc="/images/edit-icon.png"
                                     iconStyle="brightness-40 w-5"
+                                    onClick={() => setIsPopUpOpen(false)}
                                 />
 
                                 <Section 
@@ -104,6 +122,7 @@ export default function Header() {
                                     textStyle="text-sm text-[var(--website-red)]"
                                     iconSrc="/images/logout-icon-large.png"
                                     iconStyle="w-5"
+                                    onClick={() => setIsPopUpOpen(false)}
                                 />
                             </div>
                         </PopUpModal>
