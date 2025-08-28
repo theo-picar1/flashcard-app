@@ -1,4 +1,4 @@
-// ***** BASE SUBJECT CARD COMPONENT *****
+// ***** BASE SUBJECT CARD COMPONENT (ALSO USED FOR TOPIC CARD) *****
 
 // Components
 import Card from "./Card"
@@ -6,6 +6,7 @@ import Button from "./Button"
 
 // Link
 import Link from "next/link"
+import React from "react"
 
 // Props
 interface SubjectCardProps {
@@ -17,9 +18,21 @@ interface SubjectCardProps {
     colour: string
     width?: string
     className?: string
+    isSubjectCard?: boolean
+    open?: () => void
 }
 
-export default function SubjectCard({ title, totalTopics, image, totalFlashcards, colour, width = "w-72 lg:w-80", className = ""}: SubjectCardProps) {
+export default function SubjectCard({
+    title,
+    totalTopics,
+    image,
+    totalFlashcards,
+    colour,
+    width = "w-72 lg:w-80",
+    className = "",
+    isSubjectCard = true,
+    open
+}: SubjectCardProps) {
     return (
         <Card className={`${className} ${width} cursor-pointer m-auto`}>
             <div>
@@ -53,9 +66,13 @@ export default function SubjectCard({ title, totalTopics, image, totalFlashcards
                     </div>
 
                     <div className="w-full">
-                        <Link href={`/subjects/${title}`}>
-                            <Button className="w-full font-medium" variant="blue" padding="slim">Open</Button>
-                        </Link>
+                        {isSubjectCard ? (
+                            <Link href={`/subjects/${title}`}>
+                                <Button className="w-full font-medium" variant="blue" padding="slim">Open</Button>
+                            </Link>
+                        ) : (
+                            <Button className="w-full font-medium" variant="blue" padding="slim" onClick={open}>Open</Button>
+                        )}
 
                         <Button className="w-full mt-1 font-medium" variant="green" padding="slim">Edit</Button>
                     </div>

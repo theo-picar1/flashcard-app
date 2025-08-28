@@ -84,7 +84,6 @@ export default function Header() {
                         {/* Pop up modal */}
                         <PopUpModal
                             isOpen={popUpIsOpen}
-                            close={() => setIsPopUpOpen(false)}
                             className="bg-white right-0 top-10 rounded-md w-44 flex flex-col"
                         >
                             <div className="w-full flex flex-row justify-end pt-2 px-4"> 
