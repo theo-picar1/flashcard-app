@@ -150,14 +150,13 @@ export default function User() {
                     <p className="font-bold text-2xl text-[var(--bold-text)]">History</p>
 
                     <Button
-                        variant="white"
                         padding="slim"
                         className="relative"
                     >
                         <img
                             src="/images/clock-icon-large.png"
                             alt="View all exams button"
-                            className="w-4"
+                            className="w-4 invert"
                         />
                         <p>View all</p>
                     </Button>
