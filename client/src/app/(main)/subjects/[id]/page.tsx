@@ -78,7 +78,10 @@ export default function Subject() {
                                 <div>
                                     <p className="md-bold-text text-[var(--bold-text)]">Practice</p>
                                     <div className="flex flex-col gap-2">
-                                        <Button className="w-full" padding="slim">Flashcards</Button>
+                                        <Link href="/flashcards">
+                                            <Button className="w-full" padding="slim">Flashcards</Button>
+                                        </Link>
+                                        
                                         <Button className="w-full" padding="slim">Test</Button>
                                     </div>
                                 </div>
