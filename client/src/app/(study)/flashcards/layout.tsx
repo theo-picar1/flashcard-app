@@ -9,7 +9,7 @@ export default function FlashcardLayout({ children }: Readonly<{ children: React
     return (
         <div className="h-screen flex flex-col justify-between">
             <div className="flex flex-row justify-between items-center px-6 py-4 border-b border-black">
-                <p className="sm-bold-text text-[var(--bold-text)]">00:00</p>
+                <p className="xs-bold-text text-[var(--bold-text)]">00:00</p>
 
                 <Button 
                     padding="slim" 
@@ -27,10 +27,10 @@ export default function FlashcardLayout({ children }: Readonly<{ children: React
             <div className="px-6 py-4 border-t border-black">
                 <p className="text-center sm-bold-text text-[var(--bold-text)]">Questions</p>
 
-                <div className="mt-4 flex flex-row items-center gap-4 overflow-x-scroll" style={{ scrollbarWidth: "none" }}>
+                <div className="mt-2 flex flex-row items-center gap-4 overflow-x-scroll" style={{ scrollbarWidth: "none" }}>
                     {questions.map(question =>
-                        <div key={question} className="flex items-center justify-center rounded-sm bg-gray-200 w-10 h-10 flex-shrink-0">
-                            <p className="font-extrabold text-md text-[var(--bold-text)]">{question}</p>
+                        <div key={question} className="flex items-center justify-center rounded-sm bg-gray-200 w-8 h-8 flex-shrink-0">
+                            <p className="font-extrabold text-sm text-[var(--bold-text)]">{question}</p>
                         </div>
                     )}
                 </div>
