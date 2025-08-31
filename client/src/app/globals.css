@@ -79,6 +79,10 @@ body {
 }
 
 /* Typography (titles) */
+.xxl-bold-text {
+  @apply font-bold text-5xl md:text-6xl lg:text-7xl;
+}
+
 .xl-bold-text {
   @apply font-bold text-4xl md:text-5xl lg:text-6xl;
 }
@@ -88,7 +92,7 @@ body {
 }
 
 .md-bold-text {
-  @apply font-bold text-2xl;
+  @apply font-bold text-2xl md:text-3xl lg:text-4xl;
 }
 
 .sm-bold-text {
@@ -120,10 +124,6 @@ body {
 
 #check-flashcard-radio:has(input[type="radio"]:checked) img {
   filter: brightness(0) invert(1);
-}
-
-.perspective {
-  perspective: 1000px;
 }
 
 .backface-hidden {
