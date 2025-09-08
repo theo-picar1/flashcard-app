@@ -92,7 +92,7 @@ body {
 }
 
 .md-bold-text {
-  @apply font-bold text-2xl md:text-3xl lg:text-4xl;
+  @apply font-bold text-2xl;
 }
 
 .sm-bold-text {
