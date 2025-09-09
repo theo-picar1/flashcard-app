@@ -47,7 +47,7 @@ export default function QuestionNavLaptop({
                             <div
                                 key={index}
                                 onClick={() => goToFlashcard?.(index)}
-                                className={`flex flex-row items-center justify-between border rounded-sm cursor-pointer p-4 ${index === currentIndex ? "border-black" : "border-transparent"} hover:bg-gray-300`}
+                                className={`flex flex-row items-center justify-between border rounded-sm cursor-pointer p-4 bg-white ${index === currentIndex ? "border-black" : "border-transparent"} hover:bg-gray-300`}
                             >
                                 <div>
                                     <p className="text-sm text-[var(--bold-text)] font-bold">Question {index + 1}</p>

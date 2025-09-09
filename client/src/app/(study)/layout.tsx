@@ -8,8 +8,8 @@ import Link from "next/link"
 
 export default function StudyLayout({ children }: { children: React.ReactNode }) {
     return (
-        <div>
-            <div className="flex flex-col h-screen">
+        <div className="bg-[var(--background)]">
+            <div className="flex flex-col h-screen bg-[var(--background)]">
                 <div className="flex flex-row md:grid md:grid-cols-3 justify-between items-center py-4 border-b border-black base-padding-rule">
                     <p className="xs-bold-text text-[var(--bold-text)]">00:00</p>
 

@@ -13,9 +13,6 @@ import { useState } from "react"
 // Hooks
 import { useFlashcards } from "@/hooks/flashcards/useFlashcards"
 
-// Type
-import { Flashcard } from "@/mock/flashcards"
-
 // Actual page content
 export default function FlashcardsPage() {
     // Hook variables
@@ -39,10 +36,10 @@ export default function FlashcardsPage() {
 
     // Go to the next flashcard through 'next' or 'back' button
     const goToNextOrPrevFlashcard = (direction: "prev" | "next") => {
-        if(currentIndex >= 0 && direction === "prev") {
+        if (currentIndex >= 0 && direction === "prev") {
             setCurrentIndex(currentIndex - 1)
         }
-        else if(currentIndex < flashcards.length && direction === "next") {
+        else if (currentIndex < flashcards.length && direction === "next") {
             setCurrentIndex(currentIndex + 1);
         }
     }
@@ -128,23 +125,27 @@ export default function FlashcardsPage() {
                     </div>
                 </div>
 
-                {/* Controls */}
                 <div className="flex justify-center gap-6 md:gap-8 shrink-0">
-                    <RadioButton 
-                        id="mark-flashcard-radio"
+                    {/* Mark as Incorrect */}
+                    <button
+                        type="button"
                         onClick={() => markCurrentFlashcard("incorrect")}
+                        className={`relative flex items-center justify-center w-12 h-12 p-6 rounded-md cursor-pointer 
+      ${markedFlashcards[currentIndex] === "incorrect" ? "bg-[var(--website-red)]" : "bg-gray-200"} 
+      `}
                     >
                         <img
                             src="/images/red-close-icon-large.png"
-                            alt="Mark flashcard"
-                            className="w-8 h-8 absolute"
+                            alt="Mark flashcard incorrect"
+                            className={`w-8 h-8 absolute ${markedFlashcards[currentIndex] === "incorrect" ? "filter brightness-0 invert" : ""}`}
                         />
-                    </RadioButton>
+                    </button>
 
+                    {/* View Answer */}
                     <label
                         htmlFor="view-answer-checkbox"
                         id="view-answer-label"
-                        className="relative flex items-center justify-center w-12 h-12 p-6 rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer"
+                        className="relative flex items-center justify-center w-12 h-12 p-6 rounded-md bg-gray-200  cursor-pointer"
                     >
                         <img
                             src="/images/blue-visibility-icon-large.png"
@@ -153,16 +154,19 @@ export default function FlashcardsPage() {
                         />
                     </label>
 
-                    <RadioButton 
-                        id="check-flashcard-radio"
+                    {/* Mark as Correct */}
+                    <button
+                        type="button"
                         onClick={() => markCurrentFlashcard("correct")}
+                        className={`relative flex items-center justify-center w-12 h-12 p-6 rounded-md cursor-pointer 
+                                    ${markedFlashcards[currentIndex] === "correct" ? "bg-[var(--website-green)]" : "bg-gray-200"}`}
                     >
                         <img
                             src="/images/green-check-icon-large.png"
-                            alt="Mark flashcard as complete"
-                            className="w-8 h-8 absolute"
+                            alt="Mark flashcard correct"
+                            className={`w-8 h-8 absolute ${markedFlashcards[currentIndex] === "correct" ? "filter brightness-0 invert" : ""}`}
                         />
-                    </RadioButton>
+                    </button>
                 </div>
             </div>
 
