@@ -66,7 +66,7 @@ body {
 }
 
 .base-card {
-  @apply bg-white shadow-lg rounded-xl transition-shadow duration-200 hover:shadow-lg;
+  @apply bg-white shadow-lg rounded-xl transition-shadow duration-200 hover:shadow-xl;
 }
 
 /* Spacing */
@@ -79,6 +79,10 @@ body {
 }
 
 /* Typography (titles) */
+.xxl-bold-text {
+  @apply font-bold text-5xl md:text-6xl lg:text-7xl;
+}
+
 .xl-bold-text {
   @apply font-bold text-4xl md:text-5xl lg:text-6xl;
 }
@@ -102,4 +106,34 @@ body {
 /* Icons */
 .base-icon-size {
   @apply w-6
+}
+
+/* Custom CSS styles */
+/* (flashcard page) */
+#mark-flashcard-radio:has(input[type="radio"]:checked) {
+  background-color: var(--website-red); 
+}
+
+#mark-flashcard-radio:has(input[type="radio"]:checked) img {
+  filter: brightness(0) invert(1);
+}
+
+#check-flashcard-radio:has(input[type="radio"]:checked) {
+  background-color: var(--website-green);
+}
+
+#check-flashcard-radio:has(input[type="radio"]:checked) img {
+  filter: brightness(0) invert(1);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
