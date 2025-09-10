@@ -28,9 +28,7 @@ export default function StudyLayout({ children }: { children: React.ReactNode })
                     </Link>
                 </div>
 
-                <div className="flex-1 flex w-full overflow-hidden">
-                    {children}
-                </div>
+                {children}
             </div>
         </div>
     )

@@ -54,7 +54,7 @@ export default function FlashcardsPage() {
     }
 
     return (
-        <div className="flex flex-col md:flex-row md:justify-start w-full">
+        <div className="flex flex-col md:flex-row md:justify-start w-full overflow-hidden flex-1">
             <div className="flex flex-col items-center justify-center h-full gap-8 py-4: md:py-6 md:gap-12 md:w-2/3 px-8 lg:px-12 xl:px-16">
                 <div className="w-full flex flex-row items-center justify-between shrink-0">
                     <div
