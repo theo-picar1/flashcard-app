@@ -180,11 +180,11 @@ export default function FlashcardsPage() {
 
             {/* Laptop question navigation */}
             <QuestionNavLaptop
-                flashcards={flashcards}
+                data={flashcards}
                 currentIndex={currentIndex}
-                goToFlashcard={goToFlashcard}
+                goToQuestion={goToFlashcard}
                 loading={loading}
-                markedFlashcards={markedFlashcards}
+                markedQuestions={markedFlashcards}
             />
         </div>
     )

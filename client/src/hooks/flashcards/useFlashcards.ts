@@ -6,15 +6,23 @@ import { type Flashcard } from "@/mock/flashcards"
 
 // Fetch all flashcards
 export function useFlashcards() {
-  const [flashcards, setFlashcards] = useState<Flashcard[]>([])
-  const [loading, setLoading] = useState(true)
+    const [flashcards, setFlashcards] = useState<Flashcard[]>([])
+    const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    getFlashcards().then(data => {
-      setFlashcards(data)
-      setLoading(false)
-    })
-  }, [])
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getFlashcards()
+                setFlashcards(data)
+            } catch (error) {
+                console.error("Error fetching flashcards:", error)
+            } finally {
+                setLoading(false)
+            }
+        }
 
-  return { flashcards, loading }
+        fetchData()
+    }, [])
+
+    return { flashcards, loading }
 }

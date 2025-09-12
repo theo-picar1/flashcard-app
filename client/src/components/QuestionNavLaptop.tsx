@@ -1,23 +1,24 @@
 // ***** QUESTION NAVIGATION FOR (STUDY) GROUP: LAPTOP *****
 
-// Flashcard type
+// Types
 import { Flashcard } from "@/mock/flashcards"
+import { MultipleChoice } from "@/mock/multipleChoices"
 
 // Props
 interface QuestionNavLaptopProps {
-    flashcards?: Flashcard[]
+    data?: Flashcard[] | MultipleChoice[]
     currentIndex: number
-    goToFlashcard?: (index: number) => void
+    goToQuestion?: (index: number) => void
     loading?: boolean
-    markedFlashcards?: string[]
+    markedQuestions?: string[]
 }
 
 export default function QuestionNavLaptop({
-    flashcards = [],
+    data = [],
     currentIndex,
-    goToFlashcard,
+    goToQuestion,
     loading,
-    markedFlashcards
+    markedQuestions
 }: QuestionNavLaptopProps) {
 
     return (
@@ -33,20 +34,20 @@ export default function QuestionNavLaptop({
                     className="mt-2 flex-1 flex flex-col gap-4 overflow-y-auto"
                     style={{ scrollbarWidth: "none" }}
                 >
-                    {flashcards.map((flashcard, index) => {
+                    {data.map((flashcard, index) => {
                         // Determine background color based on marked status
                         let bgColor = "bg-white"
 
-                        if (markedFlashcards?.[index] === "correct") {
+                        if (markedQuestions?.[index] === "correct") {
                             bgColor = "bg-[var(--website-green)]"
-                        } else if (markedFlashcards?.[index] === "incorrect") {
+                        } else if (markedQuestions?.[index] === "incorrect") {
                             bgColor = "bg-[var(--website-red)]"
                         }
 
                         return (
                             <div
                                 key={index}
-                                onClick={() => goToFlashcard?.(index)}
+                                onClick={() => goToQuestion?.(index)}
                                 className={`flex flex-row items-center justify-between border rounded-sm cursor-pointer p-4 bg-white ${index === currentIndex ? "border-black" : "border-transparent"} hover:bg-gray-300`}
                             >
                                 <div>
